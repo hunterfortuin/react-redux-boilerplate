@@ -1,0 +1,34 @@
+# Ignore Mac OS Metadata Files
+.DS_Store
+
+# Ignore Max OS Extended File Attribute Files
+._*
+._*/
+
+# Ignore Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime Data
+pids
+*.pid
+*.seed
+
+# Compiled Binary Addons
+build/Release
+
+# Dependency Directory
+node_modules/
+
+# Frontend Built Files
+public/javascripts/main.js
+public/stylesheets/style.css
+
+# Optional NPM Cache Directory
+.npm
+
+# Other
+_builds
+_cache
+_steps
