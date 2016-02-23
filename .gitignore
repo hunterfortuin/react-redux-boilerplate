@@ -23,7 +23,7 @@ node_modules/
 
 # Frontend Built Files
 public/javascripts/main.js
-public/stylesheets/style.css
+public/stylesheets/main.css
 
 # Optional NPM Cache Directory
 .npm
