@@ -1,5 +1,6 @@
 // NPM Server Modules
 import Express from 'express';
+import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import path from 'path';
@@ -24,8 +25,6 @@ if (process.env.NODE_ENV !== 'production') {
 	app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: webpackConfig.output.publicPath }));
 	app.use(webpackHotMiddleware(compiler));
 }
-
-// TODO: MongoDB
 
 // App configuration
 // uncomment after placing your favicon in /public

@@ -37,5 +37,4 @@ $ npm run lint
 
 
 # Todo
-- Add MongoDB
 - Add Test Suite
