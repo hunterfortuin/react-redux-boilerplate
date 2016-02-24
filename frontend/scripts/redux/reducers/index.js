@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-let baseReducer = function(state = {}, action) {
+let reducer = function(state = {}, action) {
 	switch(action.type) {
 		default:
 			return state;
@@ -8,7 +8,7 @@ let baseReducer = function(state = {}, action) {
 }
 
 const rootReducer = combineReducers({
-	baseReducer
+	reducer
 });
 
 export default rootReducer;
