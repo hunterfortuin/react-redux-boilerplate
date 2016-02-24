@@ -12,10 +12,18 @@ $ cd react-redux-boilerplate
 $ npm install
 ```
 
+## Global NPM Modules
+
+You'll need a couple global NPM modules:
+
+```
+$ npm install -g xo nodemon
+```
+
 ## Scripts
 
 ### Development
-All Javascript in the `frontend/scripts/` folder is built using Webpack to the `public/javascripts/main.js` file. All Sass in the `frontend/styles` is built using Webpack to the `public/stylesheets/main.css` file. It utilizes Hot Module Reloading in development. To build your JS/CSS and run your server run:
+Nodemon monitors all serverside changes and will automatically restart your Node server anytime a change is made. It ignores changes made to the `frontend/` folder. All Javascript in the `frontend/scripts/` folder is built using Webpack to the `public/javascripts/main.js` file. All Sass in the `frontend/styles` is built using Webpack to the `public/stylesheets/main.css` file. It utilizes Hot Module Reloading in development. To build your JS/CSS and run your server run:
 
 ```
 $ npm run start-dev
@@ -30,5 +38,4 @@ $ npm run lint
 
 # Todo
 - Add MongoDB
-- Add Nodemon for Development
 - Add Test Suite
