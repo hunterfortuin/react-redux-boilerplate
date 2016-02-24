@@ -6,8 +6,8 @@ let finalCreateStore = compose(
 	applyMiddleware(
 		logger()
 	)
-)(createStore)
+)(createStore);
 
 export default function configureStore(initialState = {}) {
-	return finalCreateStore(reducer, initialState)
+	return finalCreateStore(reducer, initialState);
 }

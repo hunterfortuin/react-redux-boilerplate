@@ -11,7 +11,7 @@ let store = configureStore(initialState);
 
 render(
 	<Provider store={store}>
-		<App />
+		<App/>
 	</Provider>,
 	document.getElementById('root')
-)
+);

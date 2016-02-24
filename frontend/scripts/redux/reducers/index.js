@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 
-let reducer = function(state = {}, action) {
-	switch(action.type) {
+let reducer = (state = {}, action) => {
+	switch (action.type) {
 		default:
 			return state;
 	}
-}
+};
 
 const rootReducer = combineReducers({
 	reducer

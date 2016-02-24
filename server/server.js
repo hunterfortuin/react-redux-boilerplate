@@ -29,9 +29,9 @@ if (process.env.NODE_ENV !== 'production') {
 
 // App configuration
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
-app.use(bodyParser.json({ limit: '20mb'}));
+app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
 app.use(cookieParser());
 app.use(Express.static(path.resolve(__dirname, '../public')));
@@ -44,7 +44,7 @@ app.use('/api', router);
 
 // Catch 404
 app.use((req, res, next) => {
-	var err = new Error('Not Found');
+	const err = new Error('Not Found');
 	err.status = 404;
 	next(err);
 });
@@ -52,28 +52,27 @@ app.use((req, res, next) => {
 // Catch Development 500
 // will print stacktrace
 if (app.get('env') === 'development') {
-  app.use((err, req, res, next) => {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
+	app.use((err, req, res) => {
+		res.status(err.status || 500);
+		res.render('error', {
+			message: err.message,
+			error: err
+		});
+	});
 }
 
 // Catch Production 500
 // no stacktraces leaked to user
-app.use((err, req, res, next) => {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
+app.use((err, req, res) => {
+	res.status(err.status || 500);
+	res.render('error', {
+		message: err.message,
+		error: {}
+	});
 });
 
-
 // Start App
-app.listen(serverConfig.port, (error) => {
+app.listen(serverConfig.port, error => {
 	if (!error) {
 		console.log(`App is running on port: ${serverConfig.port}`);
 	}

@@ -18,6 +18,13 @@ module.exports = {
 		new webpack.NoErrorsPlugin()
 	],
 	module: {
+		preLoaders: [
+			{
+				test: /\.js$/,
+				loader: 'xo-loader',
+				exclude: /node_modules/
+			}
+		],
 		loaders: [
 			{
 				test: /\.js$/,
@@ -37,5 +44,8 @@ module.exports = {
 	node: {
 		net: 'empty',
 		dns: 'empty'
+	},
+	xo: {
+		failOnError: true
 	}
-}
+};
