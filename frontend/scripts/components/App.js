@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import actions from '../redux/actions';
 
 class App extends Component {
+	static propTypes = {
+		state: PropTypes.object.isRequired
+	};
+
 	render() {
 		return (
 			<div>
@@ -14,7 +18,9 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-	return state;
+	return {
+		state
+	};
 }
 
 function mapDispatchToProps(dispatch) {
